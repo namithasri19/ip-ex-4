@@ -1,0 +1,14 @@
+# ip-ex-4
+function countOccurrences(sentence, word) {
+   const regex = new RegExp("\\b" + word + "\\b", "gi");
+   const matches = sentence.match(regex);
+    
+    // If matches is null, return 0
+    if (matches === null) {
+        return 0;
+    }
+    return matches.length;
+}
+const sentence = "This is a sample sentence with sample words. Sample is repeated to show the sample usage.";
+const word = "sample";
+console.log("Number of occurrences of '" + word + "':", countOccurrences(sentence, word));
