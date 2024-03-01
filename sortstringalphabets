@@ -1,0 +1,10 @@
+function sortStringAlphabetically(inputString) {
+    
+    return inputString.split('').sort().join('');
+}
+
+
+const inputString = "namitha";
+console.log("Input:", inputString);
+console.log("Output:", sortStringAlphabetically(inputString));
+
