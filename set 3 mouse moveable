@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Image on Mouseover</title>
+<style>
+   
+    img {
+        width: 200px;
+        height: 200px;
+        transition: transform 0.2s ease-in-out;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+
+<img id="image" src="image.jpg" alt="Original Image">
+
+<script>
+const image = document.getElementById('image');
+
+
+image.addEventListener('mouseover', function() {
+    
+    image.src = 'new-image.jpg';
+});
+
+// Add event listener for mouseout (optional)
+image.addEventListener('mouseout', function() {
+    
+    image.src = 'image.jpg';
+});
+</script>
+
+</body>
+</html>
