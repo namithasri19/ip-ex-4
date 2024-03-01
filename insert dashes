@@ -1,0 +1,15 @@
+function insertDashes(inputNumber) {
+const numString = inputNumber.toString();
+let result = "";
+for (let i = 0; i < numString.length; i++) {
+result += numString[i];
+if (parseInt(numString[i]) % 2 === 0 && parseInt(numString[i + 1]) % 2 === 0) {
+result += '-';
+}
+}
+return result;
+}
+//output
+const inputNumber = 25468;
+console.log("Input:", inputNumber);
+console.log("Output:", insertDashes(inputNumber));
